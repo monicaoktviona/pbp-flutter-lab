@@ -1,8 +1,8 @@
 ## Tugas 7
-###Jelaskan apa yang dimaksud dengan stateless widget dan stateful widget dan jelaskan perbedaan dari keduanya.
+### Jelaskan apa yang dimaksud dengan stateless widget dan stateful widget dan jelaskan perbedaan dari keduanya.
 Stateless widget adalah widget yang tidak dapat diubah. Stateless widget akan memiliki tampilan yang selalu sama selama aplikasi dijalankan. Sementara itu, stateful widget merupakan widget dinamis yang tampilannya dapat berubah-ubah berdasarkan user actions atau ketika terjadi perubahan data selama aplikasi dijalankan. Stateful widget perlu di-build ulang untuk menampilkan perubahan yang terjadi, sementara itu stateless widget tidak membutuhkan build ulang.
 
-###Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+### Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
 1. Scaffold -> widget untuk membuat sebuah halaman pada flutter
 2. Row -> untuk menampilkan widget-widget secara horizontal
 3. Center -> untuk menampilkan widget-widget secara vertikal
@@ -14,13 +14,13 @@ Stateless widget adalah widget yang tidak dapat diubah. Stateless widget akan me
 9. Padding -> untuk menambahkan padding 
 10. Expanded -> untuk mengisi space yang tersedia dari row, column, atau flex parent-nya
 
-###Apa fungsi dari setState()? Jelaskan variabel apa saja yang dapat terdampak dengan fungsi tersebut.
+### Apa fungsi dari setState()? Jelaskan variabel apa saja yang dapat terdampak dengan fungsi tersebut.
 Fungsi setState(0 berfungsi untuk memberitahu widget bahwa ada perubahan yang terjadi pada stateful widget sehingga akan dilakukan build ulang pada widget tersebut agar perubahan dapat ditampilkan. Variabel yang akan di-build ulang adalah variabel-variabel yang diubah di dalam fungsi setState().
 
-###Jelaskan perbedaan antara const dengan final.
+### Jelaskan perbedaan antara const dengan final.
 final digunakan untuk mendeklarasikan variabel immutable (nilainya tidak nisa diubah setelah diinisiasi) yang nilainya belum ataupun sudah diketahui ketika program di-compile. Sementara itu, const digunakan untuk mendeklarasikan variabel immutable yang nilainya berupa konstan dan harus sudah diketahui ketika program di-compile. Apabila nilainya belum diketahui ketika program di-compile, maka akan terjadi error.
 
-###Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+### Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
 1. Membuat program baru bernama counter_7
 2. Membuat fungsi _decrementCounter() untuk melakukan pengurangan pada counter ketike tombol "-" ditekan.
 3. Menambahkan teks "GANJIL" dan "GENAP" sesuai dengan angka pada counter dengan menambahkan potongan kode berikut.
