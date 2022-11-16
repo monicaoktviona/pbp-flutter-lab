@@ -56,3 +56,28 @@ child: Row(
         ),
 ```
 5. Menambahkan padding agar tampilan tombol lebih rapih.
+
+## Tugas 8
+### Jelaskan perbedaan Navigator.push dan Navigator.pushReplacement
+`Navigator.push` akan menambahkan rute lain ke atas tumpukan halaman (stack) yang ada sehingga halaman baru akan ditampilkan di atas halaman sebelumnya.
+Sementara itu, `Navigator.pushReplacement` akan mengganti rute navigator saat ini dengan rute baru. Setelah halaman baru selesai ditampilkan, maka rute navigator sebelumnya akan dibuang.
+### Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+1. `Drawer` -> widget navigasi yang dapat digeser/disembunyikan ke sisi kiri layar
+2. `ListTile` -> widget yang biasanya diisi oleh beberapa teks, leading, dan trailing icons
+3. `Form` -> widget container yang memungkinkan kita untuk mengelompokkan beberapa form field
+4. `TextFormField` -> widget untuk menerima input berupa text
+5. `DropDownButton` -> widget untuk menampilkan dropdown
+6. `TextButton` -> widget untuk menampilkan tombol berisi teks yang secara default tidak memiliki border
+###  Sebutkan jenis-jenis event yang ada pada Flutter (contoh: onPressed).
+1. `onTap`
+2. `onPressed`
+3. `onChanged`
+4. `onSaved`
+### Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter.
+Navigator akan menumpuk halaman-halaman seperti elemen-elemen di dalam stack. Saat halaman diganti dengan `Navigator.push`, maka halaman baru akan diletakkan di top of stack. Jika halaman diganti dengan `Navigator.pushReplacement`, maka halaman yang baru akan diletakkan pada posisi halaman saat ini (halaman saat ini akan dihapus dari stack). Sementara itu, jika dilakukan pemanggilan `Navigator.pop` maka halaman saat ini akan dihapus dari stack dan halaman sebelumnya akan ditampilkan.
+### Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+1. Membuat file form.dart dan data.dart.
+2. Membuat drawer di masing-masing page untuk menavigasi ke halaman lain.
+3. Menambahkan dua widget `TextFormField`, satu widget `DropDownButton`, dan satu widget `TextButton` pada form.dart untuk menerima dan menyimpan input.
+4. Membuat class `Budget` dan List `listBudget` untuk menyimpan data yang diinput dalam bentuk instance dari class `Budget`.
+5. Menggunakan widget `ListView` untuk menampilkan semua data yang telah diinput ke halaman `data.dart`.
