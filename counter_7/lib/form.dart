@@ -13,7 +13,7 @@ class MyFormPage extends StatefulWidget {
 
 class Budget {
   final String judulBudget;
-  final double nominalBudget;
+  final int nominalBudget;
   final String jenisBudget;
 
   const Budget(this.judulBudget, this.nominalBudget, this.jenisBudget);
@@ -22,7 +22,7 @@ class Budget {
 class _MyFormPageState extends State<MyFormPage> {
   final _formKey = GlobalKey<FormState>();
   String _judul = "";
-  double _nominal = 0;
+  int _nominal = 0;
   String? jenis = null;
   //List<String?> listJenis = ['Pemasukan', 'Pengeluaran'];
 
@@ -123,13 +123,13 @@ class _MyFormPageState extends State<MyFormPage> {
                     // Menambahkan behavior saat nama diketik
                     onChanged: (String? value) {
                       setState(() {
-                        _nominal = double.parse(value!);
+                        _nominal = int.parse(value!);
                       });
                     },
                     // Menambahkan behavior saat data disimpan
                     onSaved: (String? value) {
                       setState(() {
-                        double.parse(value!);
+                        int.parse(value!);
                       });
                     },
                     // Validator sebagai validasi form
