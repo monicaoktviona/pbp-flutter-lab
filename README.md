@@ -81,3 +81,27 @@ Navigator akan menumpuk halaman-halaman seperti elemen-elemen di dalam stack. Sa
 3. Menambahkan dua widget `TextFormField`, satu widget `DropDownButton`, dan satu widget `TextButton` pada form.dart untuk menerima dan menyimpan input.
 4. Membuat class `Budget` dan List `listBudget` untuk menyimpan data yang diinput dalam bentuk instance dari class `Budget`.
 5. Menggunakan widget `ListView` untuk menampilkan semua data yang telah diinput ke halaman `data.dart`.
+
+## Tugas 9
+###  Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+Bisa. Hal tersebut dapat dilakukan dengan cara manual decoding yang memanfaatkan built-in JSON decoder pada `dart:convert`. JSON string akan di-pass ke fungsi jsonDecode() untuk menghasilkan Map<String, dynamic>.
+Namun, manual decoding tidak direkomendasikan untuk projek yang besar karena akan sulit untuk dilakukan dan di-maintain serta lebih rentan terjadi error.
+
+### Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+1. `TextSpan` -> widget yang mendeskripsikan teks yang berada dalam satu paragraf yang dapat ditambahkan _style_ berbeda untuk tiap bagian pada paragraf tersebut.
+2. `RichText` -> widget yang dapat menampilkan teks dengan beberapa  _style_ yang berbeda.
+3. `FutureBuilder` -> widget yang digunakan untuk membuat widget berdasarkan snapshot terbaru dari interaksi dengan Future.
+
+### Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+1. Menambahkan dependensi HTTP dengan cara melakukan perintah `flutter pub http` pada terminal proyek Flutter serta menambahkan 
+potongan kode `<uses-permission android:name="android.permission.INTERNET" />` pada file `android/app/src/main/AndroidManifest.xml`. 
+2. Membuat model dengan memanfaatkan website Quicktype dan disimpan pada file `watchlist_model.dart`.
+3. Data diambil dengan menggunakan method `http.get`.
+4. Objek yang didapatkan dikonversi menjadi model yang telah dibuat.
+5. Data ditampilkan menggunakan `FutureBuilder`.
+
+### Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+1.  Membuat model dari watchlist yang ada pada endpoint JSON pada aplikasi Django yang sudah pernah dibuat dengan memanfaatkan website QuickType.
+2.  Membuat halaman watchlist dan menambahkan drawer.
+3.  Membuat halaman detail untuk menampilkan detail dari setiap film.
+4.  Menambahkan tombol kembali pada halaman detail.
